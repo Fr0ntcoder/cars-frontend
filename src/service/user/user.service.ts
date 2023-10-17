@@ -1,29 +1,29 @@
-import { axiosInstance } from '../../api/api.interceptors'
-import { EnumConstants } from '../../types/constants.enum'
+/* import { axiosInstance } from '@/api/api.interceptors' */
+import { IFullUser } from '@/service/user/user.interface'
+import { TUserData } from '@/service/user/user.types'
 
-import { IFullUser } from './user.interface'
-import { TUserData } from './user.types'
+import { EnumConstantsUrl } from '@/types/constants.enum'
+
+import { axiosInstance } from '@/api/api.interceptors'
 
 export const UserService = {
 	async getProfile() {
-		return axiosInstance<IFullUser>({
-			url: `${EnumConstants.USER}/profile`,
+		return await axiosInstance<IFullUser>({
+			url: `${EnumConstantsUrl.USER}/profile`,
 			method: 'GET'
 		})
 	},
-
 	async updateProfile(data: TUserData) {
-		return axiosInstance({
-			url: `${EnumConstants.USER}/profile`,
+		return await axiosInstance({
+			url: `${EnumConstantsUrl.USER}/profile`,
 			method: 'PUT',
 			data
 		})
 	}
-
 	/* async toogleFavorite(carId: string | number) {
         return axiosInstance({
 			url: `${EnumConstants.USER}/profile`,
 			method: 'PATCH',
 		})
-    } */
+    })*/
 }

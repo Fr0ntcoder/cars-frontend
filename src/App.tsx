@@ -1,17 +1,9 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Routing } from 'routing/Routing'
 
-import { AboutPage } from './pages/About'
-import { HomePage } from './pages/HomePage'
+import '@/assets/styles/index.scss'
 
 function App() {
-	return (
-		<Router>
-			<Routes>
-				<Route path='/' element={<HomePage />} />
-				<Route path='/about' element={<AboutPage />} />
-			</Routes>
-		</Router>
-	)
+	return <Routing />
 }
 
 export default App

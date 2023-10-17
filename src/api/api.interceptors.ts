@@ -6,12 +6,12 @@ import { AuthService } from '../service/auth/auth.service'
 import { errorCatch, getContentType } from './api.helper'
 
 export const axiosDefault = axios.create({
-	baseURL: process.env.SERVER_URL,
+	baseURL: import.meta.env.VITE_SERVER_URL,
 	headers: getContentType()
 })
 
 export const axiosInstance = axios.create({
-	baseURL: process.env.SERVER_URL,
+	baseURL: import.meta.env.VITE_SERVER_URL,
 	headers: getContentType()
 })
 

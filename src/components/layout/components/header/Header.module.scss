@@ -1,0 +1,32 @@
+.header {
+	display: block;
+	padding: 15px 0;
+	background: rgba($default-color, 0.95);
+}
+
+.wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 50px;
+	margin-right: 25px;
+	color: $secondary-color;
+
+	@include pulsating(2s);
+}
+
+.location {
+	margin-right: auto;
+}
+
+.link {
+	font-size: 16px;
+	font-weight: 600;
+	padding: 5px 30px;
+	border-radius: 10px;
+	background: #fff;
+	color: $default-color;
+}

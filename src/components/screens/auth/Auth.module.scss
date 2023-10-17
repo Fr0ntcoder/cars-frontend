@@ -1,0 +1,29 @@
+.wrap {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	display: grid;
+	max-width: 400px;
+	width: 100%;
+	grid-row-gap: 15px;
+	padding: 15px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.title {
+	font-size: 22px;
+}
+
+.switch {
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+	color: $blue-color;
+	cursor: pointer;
+}

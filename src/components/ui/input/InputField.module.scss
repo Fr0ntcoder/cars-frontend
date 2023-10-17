@@ -1,0 +1,16 @@
+.input {
+	input {
+		width: 100%;
+		padding: 10px 15px 10px 10px;
+		border: 2px solid $secondary-color;
+		border-radius: 5px;
+	}
+
+	&__error {
+		display: block;
+		font-size: 12px;
+		font-weight: 600;
+		margin-top: 5px;
+		color: red;
+	}
+}

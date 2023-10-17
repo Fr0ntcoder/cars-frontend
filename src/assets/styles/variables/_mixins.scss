@@ -1,0 +1,48 @@
+@mixin responsiveImg {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	img,
+	video {
+		position: absolute;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+	& > div {
+		overflow: hidden;
+	}
+	&--contain {
+		img {
+			object-fit: contain;
+		}
+	}
+	&--nofill {
+		img {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: auto;
+			width: auto;
+		}
+	}
+}
+
+@mixin pulsating($animationDuration) {
+	animation: pulse $animationDuration infinite;
+
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+}
