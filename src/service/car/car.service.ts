@@ -16,5 +16,12 @@ export const CarService = {
 			url: `${EnumConstantsUrl.CAR}/${id}`,
 			method: 'GET'
 		})
+	},
+
+	async getByBody(brandSlug: string | null, categorySlug: string | null) {
+		return await axiosDefault<TCar[]>({
+			url: `${EnumConstantsUrl.CAR}/${brandSlug}/${categorySlug}`,
+			method: 'GET'
+		})
 	}
 }

@@ -15,6 +15,10 @@ const queryClient = new QueryClient({
 	}
 })
 
+/* queryClient.invalidateQueries({
+	queryKey: ['carBrandBody', 'brandBySlug', 'brand']
+}) */
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<QueryClientProvider client={queryClient}>

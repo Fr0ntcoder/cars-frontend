@@ -1,7 +1,10 @@
 export enum EnumConstantsUrl {
 	USER = 'user',
 	AUTH = 'auth',
-	CAR = 'car'
+	CAR = 'car',
+	BRAND = 'brand',
+	BODY = 'body',
+	REVIEW = 'review'
 }
 
 export enum EnumConstantsRoutes {

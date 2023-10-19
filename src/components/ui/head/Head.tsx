@@ -2,10 +2,10 @@ import { FC } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 type THead = {
-	title: string
+	title?: string
 }
 
-export const Head: FC<THead> = ({ title }) => {
+export const Head: FC<THead> = ({ title = '' }) => {
 	return (
 		<Helmet>
 			<meta charSet='utf-8' />

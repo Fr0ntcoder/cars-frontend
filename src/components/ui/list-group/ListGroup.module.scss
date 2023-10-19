@@ -1,0 +1,27 @@
+.list {
+	display: block;
+
+	&.column__2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+	}
+
+	&.column__3 {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+	}
+
+	&.column__4 {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+	}
+
+	&.column__5 {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 20px;
+	}
+}
