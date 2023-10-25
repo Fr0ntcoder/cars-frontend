@@ -1,15 +1,17 @@
 import { FC } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { Layout } from '@/components/layout/Layout'
 import { CardCar } from '@/components/ui/card/card-car/CardCar'
+import { Head } from '@/components/ui/head/Head'
 import { ListGroup } from '@/components/ui/list-group/ListGroup'
+import { Loader } from '@/components/ui/loader/Loader'
+import { NotFound } from '@/components/ui/not-found/NotFound'
 
 import { useCarsBody } from '@/hooks/car/useCarsBody'
 
-import styles from './BodySingle.module.scss'
+import { textUpperCase } from '@/utils/textFormat'
 
-export const BodySingle: FC = () => {
+export const Body: FC = () => {
 	const { brandSlug, categorySlug } = useParams()
 	const { data, isLoading, isError } = useCarsBody(
 		brandSlug || null,
@@ -17,22 +19,27 @@ export const BodySingle: FC = () => {
 	)
 
 	if (isLoading) {
-		return <div>Загрузка....</div>
+		return <Loader />
 	}
 
 	if (isError || !data) {
-		return <div className={styles.empty}>Ошибка...</div>
+		return <NotFound />
+	}
+
+	if (data.length === 0) {
+		return <NotFound />
 	}
 
 	const list = data.map(item => <CardCar key={item.id} item={item} />)
 
 	return (
-		<Layout>
-			{data.length === 0 ? (
-				<div className={styles.empty}>Ничего не найдено</div>
-			) : (
-				<ListGroup column={3}>{list}</ListGroup>
-			)}
-		</Layout>
+		<>
+			<Head
+				title={`Бренд-${textUpperCase(brandSlug)}-${textUpperCase(
+					categorySlug
+				)}`}
+			/>
+			<ListGroup column={3}>{list}</ListGroup>
+		</>
 	)
 }

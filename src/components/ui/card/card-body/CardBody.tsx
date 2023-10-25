@@ -13,15 +13,15 @@ type TCardBodyProps = {
 }
 export const CardBody: FC<TCardBodyProps> = ({ item, slug }) => {
 	return (
-		<li className={styles.item}>
+		<li className={styles.card__body}>
 			<Link
 				to={`/${EnumConstantsUrl.CAR}/${slug}/${item.slug}`}
-				className={styles.link}
+				className={styles.card__body_link}
 			>
-				<span className={styles.icon}>
+				<span className={styles.card__body_icon}>
 					<img src={item.icon} alt='' />
 				</span>
-				<h4 className={styles.title}>{item.name}</h4>
+				<h4 className={styles.card__body_title}>{item.name}</h4>
 			</Link>
 		</li>
 	)

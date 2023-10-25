@@ -11,5 +11,6 @@ export enum EnumConstantsRoutes {
 	HOME = '/',
 	PROFILE = '/profile',
 	ERROR = '/error',
-	AUTH = '/auth'
+	AUTH = '/auth',
+	LOGIN = 'LOGIN'
 }
