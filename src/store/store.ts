@@ -1,4 +1,5 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
+import { combineReducers } from 'redux'
 import {
 	FLUSH,
 	PAUSE,
@@ -11,20 +12,11 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-import { userSlice } from './user/user.slice'
+import { userSlice } from '@/store/user/user.slice'
 
-/* const baseQuery = fetchBaseQuery({
-	baseUrl: process.env.SERVER_URL
-})
-
-export const api = createApi({
-	baseQuery,
-	reducerPath: 'api',
-	endpoints: builder => ({})
-})
- */
+/* import rootReducer from ''; */
 const persistConfig = {
-	key: 'car-frontend',
+	key: 'car',
 	storage,
 	whitelist: ['']
 }

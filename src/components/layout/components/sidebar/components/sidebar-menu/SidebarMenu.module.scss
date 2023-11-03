@@ -1,0 +1,30 @@
+.sidebarMenu {
+	display: block;
+
+	&__item {
+		display: block;
+		&.active {
+			display: block;
+
+			a {
+				background: $secondary-color;
+
+				svg {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			padding: 10px;
+			border-radius: 5px;
+			color: #fff;
+
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+}

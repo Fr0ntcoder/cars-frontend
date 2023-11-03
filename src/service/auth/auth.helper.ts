@@ -5,7 +5,7 @@ import { IAuthResponse, ITokens } from '../../store/user/user.interface'
 export const getAccessToken = () => {
 	const accessToken = Cookies.get('accessToken')
 
-	return accessToken || null
+	return accessToken
 }
 
 export const getUserFromStorage = () => {

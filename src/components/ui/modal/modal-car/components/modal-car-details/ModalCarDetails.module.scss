@@ -1,0 +1,19 @@
+.root {
+	display: block;
+}
+
+.title {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.info {
+	display: flex;
+	font-size: 16px;
+	justify-content: space-between;
+	margin-bottom: 5px;
+
+	span {
+		font-weight: 600;
+	}
+}

@@ -1,0 +1,9 @@
+.profileLayout {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	padding: 30px 0;
+
+	&__main {
+		padding-left: 50px;
+	}
+}

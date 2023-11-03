@@ -16,9 +16,25 @@
 
 		/* Linting */
 		"strict": true,
-		"noUnusedLocals": true,
+		/* "noUnusedLocals": true, */
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"baseUrl": "src",
+		"paths": {
+			"@/components/*": ["components/*"],
+			"@/layout/*": ["components/layout/*"],
+			"@/ui/*": ["components/ui/*"],
+			"@/screens/*": ["components/screens/*"],
+			"@/assets/*": ["assets/*"],
+			"@/hooks/*": ["hooks/*"],
+			"@/pages/*": ["pages/*"],
+			"@/service/*": ["service/*"],
+			"@/store/*": ["store/*"],
+			"@/types/*": ["types/*"],
+			"@/utils/*": ["utils/*"],
+			"@/api/*": ["api/*"],
+			"@/*": ["./*"]
+		}
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }]

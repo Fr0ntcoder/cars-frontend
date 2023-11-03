@@ -1,0 +1,50 @@
+.carDetails {
+	display: block;
+	&__title {
+		font-size: 25px;
+		margin-bottom: 15px;
+		color: #fff;
+	}
+
+	&__text {
+		display: block;
+		max-width: 750px;
+		width: 100%;
+		font-size: 18px;
+		margin-bottom: 30px;
+		color: #fff;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+
+		&_top {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+
+			& > svg {
+				font-size: 40px;
+				margin-right: 10px;
+				color: $secondary-color;
+			}
+
+			& > span {
+				font-size: 18px;
+				color: #fff;
+			}
+		}
+
+		&_text {
+			font-size: 16px;
+			color: #fff;
+		}
+	}
+}

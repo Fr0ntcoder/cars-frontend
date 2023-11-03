@@ -1,16 +1,18 @@
 import Cookies from 'js-cookie'
 
-import { getContentType } from '../../api/api.helper'
-import { axiosDefault } from '../../api/api.interceptors'
-import { IAuthResponse, IEmailPassword } from '../../store/user/user.interface'
-import { EnumConstants } from '../../types/constants.enum'
+import { saveToStorage } from '@/service/auth/auth.helper'
 
-import { saveToStorage } from './auth.helper'
+import { IAuthResponse, IEmailPassword } from '@/store/user/user.interface'
+
+import { EnumConstantsRoutes } from '@/types/constants.enum'
+
+import { getContentType } from '@/api/api.helper'
+import { axiosDefault } from '@/api/api.interceptors'
 
 export const AuthService = {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await axiosDefault<IAuthResponse>({
-			url: `/${EnumConstants.AUTH}/${type}`,
+			url: `${EnumConstantsRoutes.AUTH}/${type}`,
 			method: 'POST',
 			data
 		})
@@ -25,7 +27,7 @@ export const AuthService = {
 	async getNewTokens() {
 		const refreshToken = Cookies.get('refreshToken')
 		const response = await axiosDefault.post<string, { data: IAuthResponse }>(
-			`/${EnumConstants.AUTH}/login/access-token`,
+			`${EnumConstantsRoutes.AUTH}/login/access-token`,
 			{ refreshToken },
 			{
 				headers: getContentType()

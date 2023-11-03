@@ -1,0 +1,61 @@
+.headerUser {
+	position: relative;
+	display: block;
+
+	&__info {
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		z-index: 2;
+	}
+
+	&__avatar {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		border-radius: 50%;
+
+		@include responsiveImg;
+	}
+
+	&__name {
+		color: #fff;
+	}
+
+	&__drop {
+		position: absolute;
+		width: 150px;
+		top: 130%;
+		right: 0;
+		padding: 10px;
+		border-radius: 5px;
+		background: #fff;
+		z-index: 9;
+	}
+
+	&__list {
+		display: grid;
+		grid-row-gap: 10px;
+	}
+
+	&__item {
+		display: flex;
+		font-size: 14px;
+		align-items: center;
+		color: #000;
+
+		svg {
+			margin-right: 10px;
+		}
+
+		a {
+			color: #000;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

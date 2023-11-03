@@ -1,0 +1,27 @@
+.carAddReview {
+	&__title {
+		font-size: 25px;
+		margin-bottom: 15px;
+		color: #fff;
+	}
+
+	&__rating {
+		margin-bottom: 30px;
+	}
+
+	&__textarea {
+		width: 500px;
+		height: 150px;
+		margin-bottom: 15px;
+	}
+
+	&__empty {
+		font-size: 18px;
+		color: #fff;
+
+		a {
+			text-decoration: underline;
+			color: #fff;
+		}
+	}
+}

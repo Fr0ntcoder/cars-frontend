@@ -1,0 +1,22 @@
+.root {
+	display: block;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 10px 30px;
+	border-radius: 10px;
+
+	&.white {
+		background: #fff;
+		color: $default-color;
+	}
+
+	&.black {
+		background: $default-color;
+		color: #fff;
+	}
+
+	&.orange {
+		background: $secondary-color;
+		color: #fff;
+	}
+}

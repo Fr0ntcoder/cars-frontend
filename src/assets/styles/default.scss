@@ -1,0 +1,22 @@
+body,
+html {
+	font-family: $main-font;
+	height: 100%;
+	background: $default-color;
+}
+.container {
+	max-width: 1300px;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+#root {
+	position: relative;
+	height: 100%;
+}
+
+#portal {
+	position: relative;
+	display: block;
+}
