@@ -1,4 +1,5 @@
 import App from 'App'
+import moment from 'moment'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
@@ -6,6 +7,8 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistor, store } from 'store/store'
+
+moment.locale('ru')
 
 const queryClient = new QueryClient({
 	defaultOptions: {

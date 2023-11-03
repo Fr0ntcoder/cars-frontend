@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { FC, ReactNode, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import { AiFillCloseCircle } from 'react-icons/ai'
+import { FaCircleXmark } from 'react-icons/fa6'
 
-import { useOutside } from '@/hooks/other/useOutside'
+import { useOutsidePortal } from '@/hooks/other/useOutsidePortal'
 
 import { FADE } from '@/utils/animation/fade'
 
@@ -20,17 +20,17 @@ type TModalCarProps = {
 export const ModalCar: FC<TModalCarProps> = ({ isOpen, children, onClose }) => {
 	const modalRef = useRef<HTMLDivElement | null>(null)
 
-	useOutside(modalRef, onClose)
+	useOutsidePortal(modalRef, onClose)
 
 	if (modalRoot) {
 		return createPortal(
 			<AnimatePresence>
 				{isOpen && (
-					<motion.div {...FADE} className={styles.modal}>
+					<motion.div {...FADE} className={styles.root}>
 						<div className={styles.overlay}>
 							<div className={styles.content} ref={modalRef}>
 								<button className={styles.close} onClick={onClose}>
-									<AiFillCloseCircle />
+									<FaCircleXmark />
 								</button>
 								{children}
 							</div>

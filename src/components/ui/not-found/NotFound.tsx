@@ -5,7 +5,7 @@ import styles from './NotFound.module.scss'
 
 export const NotFound: FC = () => {
 	return (
-		<div className={styles.not}>
+		<div className={styles.root}>
 			Не найдено <FaRegMeh />
 		</div>
 	)

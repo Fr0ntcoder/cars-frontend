@@ -14,9 +14,9 @@ export const Header: FC = () => {
 	return (
 		<header className={styles.header}>
 			<div className='container'>
-				<div className={styles.wrap}>
-					<Logo className={styles.logo} />
-					<GeoLocation className={styles.location} />
+				<div className={styles.header__wrap}>
+					<Logo className={styles.header__logo} />
+					<GeoLocation className={styles.header__location} />
 					{user ? <HeaderUser /> : <HeaderBtn />}
 				</div>
 			</div>

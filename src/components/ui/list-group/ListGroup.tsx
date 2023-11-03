@@ -15,7 +15,7 @@ export const ListGroup: FC<TListGroupProps> = ({
 }) => {
 	return (
 		<ul
-			className={clsx(styles.list, className, {
+			className={clsx(styles.root, className, {
 				[styles.column__2]: column === 2,
 				[styles.column__3]: column === 3,
 				[styles.column__4]: column === 4,

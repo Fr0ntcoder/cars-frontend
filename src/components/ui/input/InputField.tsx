@@ -10,7 +10,7 @@ interface IInputField extends InputHTMLAttributes<HTMLInputElement> {
 export const InputField = forwardRef<HTMLInputElement, IInputField>(
 	({ placeholder, error, className, type = 'text', style, ...rest }, ref) => {
 		return (
-			<label className={styles.input}>
+			<label className={styles.root}>
 				<input
 					type={type}
 					ref={ref}
@@ -19,7 +19,7 @@ export const InputField = forwardRef<HTMLInputElement, IInputField>(
 						[styles.error]: error
 					})}
 				/>
-				{error && <span className={styles.input__error}>{error}</span>}
+				{error && <span className={styles.error}>{error}</span>}
 			</label>
 		)
 	}

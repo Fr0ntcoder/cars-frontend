@@ -1,3 +1,5 @@
+import { IReviewFull } from '@/service/review/review.interface'
+
 export type TCar = {
 	id: string
 	name: string
@@ -13,5 +15,6 @@ export type TCar = {
 	class: string
 	year: number
 	images: string[]
+	reviews: IReviewFull[]
 	carCategoryId: string
 }

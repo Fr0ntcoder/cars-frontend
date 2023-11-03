@@ -2,10 +2,7 @@ import { useQuery } from 'react-query'
 
 import { CarService } from '@/service/car/car.service'
 
-export const useCarsBody = (
-	brandSlug: string | null,
-	categorySlug: string | null
-) => {
+export const useCarsBody = (brandSlug?: string, categorySlug?: string) => {
 	return useQuery(
 		['carBrandBody', brandSlug, categorySlug],
 		() => CarService.getByBody(brandSlug, categorySlug),

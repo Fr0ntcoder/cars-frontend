@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { CardCar } from '@/components/ui/card/card-car/CardCar'
+import { ErrorMessage } from '@/components/ui/error/ErrorMessage'
 import { Head } from '@/components/ui/head/Head'
 import { ListGroup } from '@/components/ui/list-group/ListGroup'
 import { Loader } from '@/components/ui/loader/Loader'
@@ -13,17 +14,14 @@ import { textUpperCase } from '@/utils/textFormat'
 
 export const Body: FC = () => {
 	const { brandSlug, categorySlug } = useParams()
-	const { data, isLoading, isError } = useCarsBody(
-		brandSlug || null,
-		categorySlug || null
-	)
+	const { data, isLoading, isError } = useCarsBody(brandSlug, categorySlug)
 
 	if (isLoading) {
 		return <Loader />
 	}
 
 	if (isError || !data) {
-		return <NotFound />
+		return <ErrorMessage />
 	}
 
 	if (data.length === 0) {

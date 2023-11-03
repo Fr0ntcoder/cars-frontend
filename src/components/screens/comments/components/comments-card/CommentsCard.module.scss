@@ -1,0 +1,38 @@
+.commentsCard {
+	padding: 15px;
+	border-radius: 10px;
+	background: #fff;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		display: block;
+		width: 70%;
+		font-size: 18px;
+		font-weight: 600;
+		word-wrap: break-word;
+	}
+
+	&__rating {
+		display: flex;
+		width: 30%;
+		justify-content: flex-end;
+		padding-left: 10px;
+		align-items: center;
+		line-height: 1;
+
+		svg {
+			margin-right: 10px;
+			color: $secondary-color;
+		}
+	}
+
+	&__date {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

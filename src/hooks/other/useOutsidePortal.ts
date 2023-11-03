@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export const useOutside = (
+export const useOutsidePortal = (
 	ref: React.RefObject<HTMLElement | null>,
 	callback: () => void
 ) => {

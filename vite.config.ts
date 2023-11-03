@@ -13,6 +13,10 @@ export default defineConfig({
 		}
 	},
 	css: {
+		modules: {
+			localsConvention: 'camelCase',
+			generateScopedName: '[local]--[hash:base64:5]'
+		},
 		preprocessorOptions: {
 			scss: {
 				additionalData: `@import "@/assets/styles/variables/variables.scss";`

@@ -1,26 +1,33 @@
 import { TCar } from '@/service/car/car.types'
 
-import { EnumConstantsUrl } from '@/types/constants.enum'
+import { EnumConstantsRoutes } from '@/types/constants.enum'
 
 import { axiosDefault } from '@/api/api.interceptors'
 
 export const CarService = {
 	async getAll() {
 		return await axiosDefault<TCar[]>({
-			url: `${EnumConstantsUrl.CAR}`,
+			url: `${EnumConstantsRoutes.CAR}`,
 			method: 'GET'
 		})
 	},
-	async getById(id: string) {
+	async getById(id?: string) {
 		return await axiosDefault<TCar>({
-			url: `${EnumConstantsUrl.CAR}/${id}`,
+			url: `${EnumConstantsRoutes.CAR}/${id}`,
 			method: 'GET'
 		})
 	},
 
-	async getByBody(brandSlug: string | null, categorySlug: string | null) {
+	async getBySlug(slug?: string) {
+		return await axiosDefault<TCar>({
+			url: `${EnumConstantsRoutes.CAR}/by-slug/${slug}`,
+			method: 'GET'
+		})
+	},
+
+	async getByBody(brandSlug?: string, categorySlug?: string) {
 		return await axiosDefault<TCar[]>({
-			url: `${EnumConstantsUrl.CAR}/${brandSlug}/${categorySlug}`,
+			url: `${EnumConstantsRoutes.CAR}/${brandSlug}/${categorySlug}`,
 			method: 'GET'
 		})
 	}

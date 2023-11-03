@@ -9,7 +9,7 @@ type TImageProps = {
 }
 export const Image: FC<TImageProps> = ({ src, className }) => {
 	return (
-		<div className={clsx(styles.img, className)}>
+		<div className={clsx(styles.image, className)}>
 			<img src={src} alt='' loading='lazy' />
 		</div>
 	)

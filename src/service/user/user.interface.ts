@@ -1,3 +1,6 @@
+import { TCar } from '@/service/car/car.types'
+import { IReviewFull } from '@/service/review/review.interface'
+
 export interface IUser {
 	id: string
 	email: string
@@ -7,6 +10,6 @@ export interface IUser {
 }
 
 export interface IFullUser extends IUser {
-	favorites: string[]
-	orders: string[]
+	favorites: TCar[]
+	reviews: IReviewFull[]
 }

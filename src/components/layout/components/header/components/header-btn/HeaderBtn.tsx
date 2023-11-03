@@ -14,7 +14,7 @@ type THeaderBtnProps = {
 
 export const HeaderBtn: FC<THeaderBtnProps> = ({ className }) => {
 	return (
-		<div className={clsx(styles.btn, className)}>
+		<div className={clsx(styles.headerBtn, className)}>
 			<Link to={EnumConstantsRoutes.AUTH}>
 				<Button variant='orange'>Войти</Button>
 			</Link>

@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { Button } from '@/components/ui/button/Button'
 import { Head } from '@/components/ui/head/Head'
 import { InputField } from '@/components/ui/input/InputField'
+import { Title } from '@/components/ui/title/Title'
 
 import { TAuthTypes } from '@/service/auth/auth.types'
 
@@ -33,9 +34,9 @@ export const Auth: FC = () => {
 	return (
 		<>
 			<Head title={text} />
-			<div className={styles.wrap}>
+			<div className={styles.root}>
 				<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-					<h3 className={styles.title}>{text}</h3>
+					<Title el='h3' title={text} />
 					<InputField
 						type='email'
 						placeholder='Email'

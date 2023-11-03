@@ -1,7 +1,8 @@
-.btn {
+.headerBtn {
 	display: flex;
 
 	a {
+		display: block;
 		&:first-child {
 			margin-right: 15px;
 		}

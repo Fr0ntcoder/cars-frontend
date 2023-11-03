@@ -16,7 +16,7 @@ export const Button: FC<PropsWithChildren<IButton>> = ({
 }) => {
 	return (
 		<button
-			className={clsx(styles.btn, className, {
+			className={clsx(styles.root, className, {
 				[styles.white]: variant === 'white',
 				[styles.black]: variant === 'black',
 				[styles.orange]: variant === 'orange'

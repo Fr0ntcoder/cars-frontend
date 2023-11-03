@@ -1,16 +1,13 @@
-export enum EnumConstantsUrl {
-	USER = 'user',
-	AUTH = 'auth',
-	CAR = 'car',
-	BRAND = 'brand',
-	BODY = 'body',
-	REVIEW = 'review'
-}
-
 export enum EnumConstantsRoutes {
 	HOME = '/',
+	CAR = '/car',
+	BRAND = '/brand',
+	BODY = '/body',
+	REVIEW = '/review',
+	USER = '/user',
 	PROFILE = '/profile',
+	PROFILE_FAVORITES = '/profile/favorites',
+	PROFILE_COMMENTS = '/profile/comments',
 	ERROR = '/error',
-	AUTH = '/auth',
-	LOGIN = 'LOGIN'
+	AUTH = '/auth'
 }

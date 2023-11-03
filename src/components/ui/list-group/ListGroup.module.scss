@@ -1,27 +1,27 @@
-.list {
+.root {
 	display: block;
 
 	&.column__2 {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 50%);
 		grid-gap: 20px;
 	}
 
 	&.column__3 {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, 33.33%);
 		grid-gap: 20px;
 	}
 
 	&.column__4 {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 25%);
 		grid-gap: 20px;
 	}
 
 	&.column__5 {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(5, 20%);
 		grid-gap: 20px;
 	}
 }

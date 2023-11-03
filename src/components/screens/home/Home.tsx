@@ -18,7 +18,6 @@ export const Home: FC = () => {
 	}
 
 	const list = data.map(item => <CardBrand key={item.id} item={item} />)
-
 	return (
 		<>
 			<Head title='Главная' />

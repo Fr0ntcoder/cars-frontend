@@ -11,7 +11,7 @@ type TLogoProps = {
 
 export const Logo: FC<TLogoProps> = ({ className }) => {
 	return (
-		<Link to='/' className={clsx(styles.logo, className)}>
+		<Link to='/' className={clsx(styles.root, className)}>
 			<FaCar className={styles.icon} />
 		</Link>
 	)

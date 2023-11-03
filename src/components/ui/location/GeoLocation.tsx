@@ -12,7 +12,7 @@ type TLocationProps = {
 export const GeoLocation: FC<TLocationProps> = ({ className }) => {
 	const { city } = useGeolocation()
 	return (
-		<div className={clsx(styles.location, className)}>
+		<div className={clsx(styles.root, className)}>
 			<FaMapMarkerAlt />
 			<span>{city}</span>
 		</div>

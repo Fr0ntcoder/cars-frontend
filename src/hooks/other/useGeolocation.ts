@@ -6,14 +6,12 @@ export const useGeolocation = () => {
 	const [error, setError] = useState(null)
 
 	useEffect(() => {
-		// Замените 'YOUR_YANDEX_API_KEY' на ваш собственный ключ
 		const apiKey = 'a1514263-da32-4303-a816-3f3d4b36fbd7'
 
 		// Получите координаты пользователя через браузерный API
 		navigator.geolocation.getCurrentPosition(
 			async position => {
 				const { latitude, longitude } = position.coords
-				console.log(latitude, longitude)
 				axios
 					.get(
 						`https://geocode-maps.yandex.ru/1.x/?apikey=${apiKey}&geocode=${longitude},${latitude}&format=json`
@@ -29,9 +27,7 @@ export const useGeolocation = () => {
 						console.error('Error getting city:', error)
 					})
 			},
-			error => {
-				/* setError('Ошибка при получении геолокации.'); */
-			}
+			error => {}
 		)
 	}, [])
 

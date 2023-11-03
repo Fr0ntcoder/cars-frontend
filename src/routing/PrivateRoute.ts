@@ -15,7 +15,7 @@ export const PrivateRoute: React.FC<RequireAuthProps> = ({ children }) => {
 
 	useEffect(() => {
 		if (!user) {
-			navigate(EnumConstantsRoutes.LOGIN, {
+			navigate(EnumConstantsRoutes.AUTH, {
 				replace: true,
 				state: { from: location.pathname }
 			})

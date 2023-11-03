@@ -1,0 +1,15 @@
+.car {
+	display: block;
+
+	&__thumb {
+		margin-bottom: 30px;
+	}
+
+	&__details {
+		margin-bottom: 60px;
+	}
+
+	&__reviews {
+		margin-bottom: 50px;
+	}
+}

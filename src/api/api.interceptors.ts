@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { getAccessToken, removeFromStorage } from '../service/auth/auth.helper'
+import { getAccessToken } from '../service/auth/auth.helper'
 import { AuthService } from '../service/auth/auth.service'
 
 import { errorCatch, getContentType } from './api.helper'
@@ -44,7 +44,7 @@ axiosInstance.interceptors.response.use(
 				return axiosInstance.request(originalRequest)
 			} catch (err) {
 				if (errorCatch(err) === 'jwt expired') {
-					removeFromStorage()
+					/* removeFromStorage() */
 				}
 			}
 		}
